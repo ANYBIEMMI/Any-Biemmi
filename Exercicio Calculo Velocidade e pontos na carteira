@@ -1,0 +1,19 @@
+// Velocidade maxima 80km;um ponto na carteira por 5km ultrapassado do limite, se passar de 12 pontos, carteira suspensa
+
+
+verificarVelocidade(150);
+function verificarVelocidade(velocidade){
+   const velocidadeMaxima = 80;
+   const KmporPonto = 5;
+
+
+    if(velocidade <= velocidadeMaxima)
+    console.log ("Dentro do limite");
+    else{
+        const pontos = Math.floor(((velocidade -velocidadeMaxima) / KmporPonto));
+        if (pontos >= 12)
+        console.log('Carteira Suspensa');
+        else 
+        console.log('pontos',pontos);
+    }
+}
